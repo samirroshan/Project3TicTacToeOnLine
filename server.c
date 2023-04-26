@@ -6,7 +6,7 @@
 #include<stdlib.h>
 #include<unistd.h>
 #include<string.h>
-#include"conio.h"
+//#include"conio.h"
 #include<time.h>
 
 int num;
@@ -16,7 +16,7 @@ struct sockaddr_in client;
 struct sockaddr_in server_address; 
 int number;
 unsigned int client_length;
-int postion[2]
+int postion[2];
 int winning = 0;
 char pos[9];
 
@@ -137,7 +137,7 @@ void readwrite(int n) {
                 if(pos[postion[0] - 1] != ' ')
                 {
                     printf("wrong choice");
-                    pritnf("");
+                    printf("");
                 }
             }while(pos[postion[0]-1]!=' ');
             system("clear");
@@ -164,7 +164,7 @@ void readwrite(int n) {
                 if(pos[postion[0]-1] != ' ')
                 {
                     printf("Wrong one chosen\n");
-                    printf("try again\n")
+                    printf("try again\n");
                 }
             }while(pos[postion[0] - 1] != ' ');
             pos[postion[0]-1] = '1';
@@ -189,18 +189,21 @@ void readwrite(int n) {
             printf("");
             printf("Guest's turn: %d\n", postion[0]);
             if(winning) {
-                printf("Guest won so they got: ")
+                printf("Guest won so they got: ");
                 break;
             }
 
         }
-        close(num)
+        close(num);
     }
 
-    int main() {
+    
+}
+
+int main() {
         system("clear");
         printf("Press anything: ");
-        getch()
+        getchar();
         system("clear");
         printf("Create room press 1\n");
                 printf("Join room press 2\n");
@@ -247,7 +250,7 @@ void readwrite(int n) {
                 printf("\n7 | 8 | 9");
                 printf("\n");        
                 readwrite(pick);
-            case 3;
+            case 3:
                execv(args[0], args);
 
         }
@@ -255,4 +258,3 @@ void readwrite(int n) {
 
         
     }
-}
